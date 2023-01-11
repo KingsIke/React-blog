@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Navbar from './Components/NavBar/NavBar'
+import Home from "./Components/Home/Home"
 
 function App() {
+  const title = 'Welcome to the new Blog'
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <div className="content">
+        <Home />
+        <p>{title}</p>
+      </div>
     </div>
   );
 }
 
 export default App;
+
+// stop at 6
