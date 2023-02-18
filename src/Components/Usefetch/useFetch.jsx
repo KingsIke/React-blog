@@ -6,10 +6,12 @@ const useFetch = (url) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    const abortCont = new AbortController(); //for clearning up fetch issue
+
     setTimeout(() => {
       const getData = async () => {
         try {
-          const getAll = await fetch(url);
+          const getAll = await fetch(url, { signal: abortCont.signal });
           console.log(getAll);
           if (!getAll.ok) {
             throw Error(" Sorry could not fetch the data from the network");
@@ -20,11 +22,16 @@ const useFetch = (url) => {
           setLoading(false);
           setError(null);
         } catch (error) {
-          setError(error.message);
+          if (error.name === "AbortError") {
+            console.log("fetch aborted");
+          } else {
+            setError(error.message);
+          }
         }
       };
       getData();
     }, 1000);
+    return () => abortCont.abort();
   }, [url]);
   return { data, loading, error };
 };

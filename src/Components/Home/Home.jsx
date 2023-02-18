@@ -4,7 +4,11 @@ import IconLoading from "../IconLoading/IconLoading";
 import useFetch from "../Usefetch/useFetch";
 
 const Home = () => {
-  const { data, loading, error } = useFetch("http://localhost:8000/blogs");
+  const {
+    data: blogs,
+    loading,
+    error,
+  } = useFetch("http://localhost:8000/blogs");
   //   const [data, setdata] = useState(null);
   //   const [loading, setLoading] = useState(true);
   //   const [error, setError] = useState(null);
@@ -44,7 +48,7 @@ const Home = () => {
         </div>
       ) : (
         <div className="home">
-          {data && <BlogList blogs={data} title="All Blogs" />}
+          {blogs && <BlogList blogs={blogs} title="All Blogs" />}
         </div>
       )}
     </div>
