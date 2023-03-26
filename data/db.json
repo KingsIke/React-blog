@@ -1,17 +1,35 @@
 {
-    "blogs" : [
-        { 
-            "title": "My First Blog",
-            "body": "Why do we use it?\n it is a long established fact that a reader must be distracted",
-            "author": "mario",
-            "id": "1"
-        },
-        {
-
-            "title": "Opening Party",
-            "body": "Why do we use it?\n it is a long established fact that a reader must be distracted",
-            "author": "yoshi",
-            "id": "2"
-        }
-    ]
+  "blogs": [
+    {
+      "title": "Debugging in Coding",
+      "body": "The act of programming can be an enjoyable pursuit, however, the arduous process of debugging can often consume an extensive amount of time, even stretching over multiple days, in order to successfully identify and rectify the underlying issue. Various sophisticated technologies utilized in this endeavor include Next.js, Sanity io, FramerMotion, and HeroIcons, among others",
+      "author": "mario",
+      "id": "1"
+    },
+    {
+      "title": "Opening Party",
+      "body": "Why do we use it?\n it is a long established fact that a reader must be distracted",
+      "author": "yoshi",
+      "id": "2"
+    },
+    {
+      "title": "Decagon Scam",
+      "body": "This is a true life story",
+      "auth": "mario",
+      "author": "Kingsike",
+      "id": "ZYTiIVo"
+    },
+    {
+      "title": "Automatic",
+      "body": "Hello everyone",
+      "author": "Ikemba",
+      "id": "TT0iLDb"
+    },
+    {
+      "title": "Kingdom",
+      "body": "Kingship is great",
+      "author": "love",
+      "id": "WMYZxgl"
+    }
+  ]
 }

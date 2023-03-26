@@ -3,3 +3,5 @@ Used "npx json-server --watch data/db.json --port 8000" to run the json data ser
 /blog/:id === Get ====> A Single blog
 /blog === Post ====> Creat a blog
 /blog/:id === Delete ====> A delete blog
+
+404 page not found
